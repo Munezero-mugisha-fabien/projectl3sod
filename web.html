@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello</title>
+</head>
+<body>
+<input id="f" placeholder="a">x<sup>2</sup>+&nbsp;&nbsp;
+<input id="b" placeholder="b">x&nbsp;&nbsp;+
+<input id="d" placeholder="c">=0&nbsp;&nbsp;
+<br>
+<p id="demo1">delta</p>
+<p id="demo2">sqdelta</p>
+<p id="demo3">x1</p>
+<p id="demo4">x2</p>
+<p id="demo5">condition</p>
+<script type="text/javascript">
+  function fab(){  
+let a=document.getElementById('f').value;    
+let b=document.getElementById('b').value;
+let c=document.getElementById('d').value;
+let delta=(b*b-(4*a*c));
+let sqdelta=(b*b-(4*a*c))**0.5
+let x1=(-b+sqdelta)/2*a;
+let x2=(-b-sqdelta)/2*a;
+document.getElementById("demo1").innerHTML="delta is:"+" "+delta;
+document.getElementById("demo2").innerHTML="sqdelta:"+" "+sqdelta;
+document.getElementById("demo3").innerHTML="x1 is:"+" "+x1;
+document.getElementById("demo4").innerHTML="x2 is:"+" "+x2;
+if(delta<0){document.getElementById("demo5").innerHTML="no real root"}
+else if(delta>0){document.getElementById("demo5").innerHTML="real root"
+
+}else{document.getElementById("demo5").innerHTML="double root"}
+
+};
+</script>
+
+<button type="button" onclick="fab()">click</button>
+</body>
+</html>
